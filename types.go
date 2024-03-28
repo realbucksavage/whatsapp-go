@@ -180,6 +180,7 @@ type Language struct {
 type Parameter struct {
 	Type     string    `json:"type,omitempty"`
 	Name     string    `json:"name,omitempty"`
+	Text     string    `json:"text,omitempty"`
 	Currency *Currency `json:"currency,omitempty"`
 	DateTime *DateTime `json:"date_time,omitempty"`
 	Image    *Media    `json:"image,omitempty"`
