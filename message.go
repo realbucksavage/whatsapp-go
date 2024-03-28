@@ -56,6 +56,18 @@ func NewTextMessage(to string, text *Text, opts ...MessageOption) *Message {
 	return msg
 }
 
+func NewTemplateMessage(to string, template *Template, opts ...MessageOption) *Message {
+	msg := newMessage(to)
+	msg.Type = TypeTemplate
+	msg.Template = template
+
+	if opts != nil {
+		apply(msg, opts...)
+	}
+
+	return msg
+}
+
 func newMessage(to string) *Message {
 	return &Message{
 		MessagingProduct: "whatsapp",

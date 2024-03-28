@@ -160,8 +160,9 @@ type Location struct {
 }
 
 type Template struct {
-	Name     string    `json:"name,omitempty"`
-	Language *Language `json:"language,omitempty"`
+	Name       string      `json:"name,omitempty"`
+	Language   *Language   `json:"language,omitempty"`
+	Components []Component `json:"components,omitempty"`
 }
 
 type Component struct {
