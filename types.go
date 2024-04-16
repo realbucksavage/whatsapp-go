@@ -169,7 +169,7 @@ type Component struct {
 	Type       string      `json:"type,omitempty"`
 	SubType    string      `json:"sub_type,omitempty"`
 	Parameters []Parameter `json:"parameters,omitempty"`
-	Index      int         `json:"index,omitempty"`
+	Index      *int        `json:"index,omitempty"`
 }
 
 type Language struct {
